@@ -1,0 +1,199 @@
+body{
+    background-color: #efdec1;
+    font-size: 14px;
+}
+
+*{
+    box-sizing: border-box;
+}
+.container{
+    position: relative;
+    max-width:400px;
+    width: 100%;
+    margin:8px auto;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+#timer{
+    font-size: 20px;
+}
+
+#quiz_wrap{
+    display: none;
+}
+
+#q_title{
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+#question_list{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+#question_list li{
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   margin-bottom: 10px;
+   padding: 10px;
+   cursor: pointer;
+}
+
+#question_list li:hover{
+   background-color: #f8f8f8;
+}
+
+#question_list li.active{
+   background-color: #d4edda;
+   border-color: #c3e6cb;
+   color: #155724;
+   font-weight: bold;
+}
+
+#btn_answer, #result > a{
+    background-color: #3498db;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 0 #2880b9;
+    pointer-events:auto;
+}
+
+#btn_answer.disabled{
+    background-color: #ccc;
+    box-shadow: 0 4px 0 #bbb;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/*---------------------------------
+正解・不正解ボックス
+---------------------------------*/
+#box_wrap{
+background-color: #fff;
+    max-width: 300px;
+    width: 100%;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 4px;
+    display: none;
+}
+
+#quiz_wrap.isshow,
+#box_wrap.isshow{
+    display: block;
+}
+
+/* ---------------------
+結果発表
+---------------------*/
+#result_wrap{
+    display: none;
+}
+
+#result_wrap{
+    max-width:300px;
+    width: 100%;
+    background-color:#fff;
+    padding:30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    top:50px;
+    left:0;
+    right: 0;
+    margin:30px auto 0;
+    border-radius: 4px;
+    text-align: center;
+   display: none;
+}
+
+#result_wrap.isshow{
+    display: block;
+}
+#result_wrap > p{
+    font-size: 24px;
+}
+#result_wrap > a{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+/* ランキングリスト */
+#ranking_list{
+    display: flex;
+    display: -webkit-flex;
+    list-style:none;
+    padding: 0;
+    margin: 20px auto 0 auto;
+    width: 100%;
+}
+
+#ranking_list li{
+    background-color: #efefef;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 33%;
+}
+
+#ranking_list li.yourRank{
+    background-color: #ffff00;
+}
+
+/* ---------------------
+アンケート
+---------------------*/
+#work_sheet {
+    display: none;
+   width: 60vw;
+   background-color:#fff;
+    padding:20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin:30px auto 0;
+    border-radius: 4px;
+    text-align: center;
+}
+#work_sheet dl{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+#work_sheet dl dt{
+    width: 30%;
+    padding: 0 10px 0 0;
+    margin: 10px 0 0 0;
+    text-align: left;
+    border-right: 1px solid #ccc;
+}
+#work_sheet dl dd{
+    width: 70%;
+    padding: 0 0 0 5%;
+   margin: 10px 0 0 0;
+    text-align: left;
+}
+
+#btn_worksheet{
+    width: 100%;
+    background-color: #3498db;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 0 #2880b9;
+    pointer-events:auto;
+    border: none;
+}
+
+#btn_worksheet.disabled{
+    background-color: #ccc;
+    box-shadow: 0 4px 0 #bbb;
+    opacity: 0.7;
+    pointer-events: none;
+}

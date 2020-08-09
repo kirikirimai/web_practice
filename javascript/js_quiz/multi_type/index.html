@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>これはテスト</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <!--[if lt IE 9]>
+<script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <link rel="shortcut icon" href="">
+</head>
+
+<body>
+    <div class="container">
+        <p id="timer">00:00:000</p>
+        <div id="quiz_wrap" class="isshow">
+            <p id="q_num"></p>
+            <p id="q_title"></p>
+            <ul id="question_list">
+
+            </ul>
+            <div id="btn_answer" class="disabled">回答は？</div>
+        </div>
+    </div>
+    <div id="box_wrap">
+        <div id="boxx_inner"></div>
+        <button id="btn_next">次の質問</button>
+    </div>
+    <button id="clearstorage">ローカルストレージをクリアする</button>
+    <div id="result_wrap">
+        <p>正解は<span id="q_len"></span>問中<span id="result_num"></span>でした</p>
+        <table id="result_list">
+            <tr>
+                <td>質問ナンバー</td>
+                <td>解答</td>
+            </tr>
+
+        </table>
+        <ul id="ranking_list">
+            <li>Aランク</li>
+            <li>Bランク</li>
+            <li>Cランク</li>
+        </ul>
+    </div>
+
+    <div id="work_sheet">
+        <form id="ws_form" name="ws_form">
+            <dl>
+                <dt>使ってるスマホ</dt>
+                <dd><select id="smartphone" name="smartphone">
+                        <option value="iphone 11">iphone 11</option>
+                        <option value="xpedia">xpedia</option>
+                        <option value="google pixel 4">google pixel 4</option>
+                    </select>
+                </dd>
+                <dt>使ってるスマホ</dt>
+                <dd><input type="text">
+                </dd>
+                <dt>好きな食べ物</dt>
+                <dd><input type="checkbox" name="likefood" value="ラーメン">ラーメン
+                    <input type="checkbox" name="likefood" value="焼肉">焼肉
+                    <input type="checkbox" name="likefood" value="寿司">寿司
+                </dd>
+                <dt>好きなブランド</dt>
+                <dd><input type="radio" name="likebrand" value="セブシグ">セブシグ
+                    <input type="radio" name="likebrand" value="ジャーナルスタンダード">ジャーナルスタンダード
+                    <input type="radio" name="likebrand" value="アメリカンラグシー">アメリカンラグシー
+                </dd>
+                <dt>要望があればなんでも記入してください</dt>
+                <dd><textarea name="request" placeholder="要望があればなんでも記入してください"></textarea>
+                </dd>
+            </dl>
+            <button id="btn_worksheet" class="disabled">アンケートを送る</button>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
