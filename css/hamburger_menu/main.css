@@ -5,18 +5,19 @@
 }
 
 html, body {
-  position: relative;
+
   width: 100%;
   overflow-x: hidden;
 }
 
 #header {
   width: 100%;
-  position: relative;
+  position: fixed;
   padding: 20px 40px;
   border-bottom: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
+  background-color: #fff;
 }
 
 #header h1 {
@@ -74,7 +75,8 @@ gnav
 =============================*/
 
 #gnav {
-  position: static;
+  position: fixed;
+  width: 100%;
 }
 
 #gnav-wrap {
@@ -108,8 +110,7 @@ position: relative;
 
 @media (min-width: 780px) {
   #gnav {
-    position: absolute;
-    top: 20px;
+    width: auto;
     right: 40px;
   }
 
@@ -136,10 +137,10 @@ mainv
 =============================*/
 
 #main-contents {
-  padding: 30px;
+  padding: 0 30px 30px;
   background-color: #f1f1f1;
 }
 
 #main-contents p {
-  margin-bottom: 1000px;
+  margin-bottom: 200px;
 }
