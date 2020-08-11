@@ -8,7 +8,6 @@ let fwcol = ["#ffdd55", "#ff6622", "#2255ff", "#44ff44", ];
 // setInterval(mainLoop, 1000 / 60);
 
 
-v
 function rand(min, max) {
   return Math.floor(
     (Math.random() * (max - min + 1)) + min);
