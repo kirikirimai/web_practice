@@ -78,14 +78,13 @@ gnav
 }
 
 #gnav-wrap {
-  position: relative;
-display: none;
+position: relative;
 }
 
 #gnav-list {
   position: absolute;
   width: 100%;
-  transform: translate(100%, 0);
+  left: 100%;
   list-style: none;
   transition: all 0.5s;
   background-color: #333;
@@ -104,7 +103,7 @@ display: none;
 }
 
 #gnav-list.active {
-  transform: translate(0, 0);
+ left:0;
 }
 
 @media (min-width: 780px) {
@@ -112,10 +111,6 @@ display: none;
     position: absolute;
     top: 20px;
     right: 40px;
-  }
-
-  #gnav-wrap{
-      display: block;
   }
 
   #gnav-list {
