@@ -41,7 +41,7 @@ class Hanabi {
     this.kill = false;
     if (hp == undefined) {
       this.hp = 200;
-      this.type = 0;
+      this.type = 0; //打上花火と爆発花火をtypeで切り分ける
     } else {
       this.hp = hp;
       this.type = 1;
