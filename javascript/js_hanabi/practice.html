@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>これはテスト</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <!--[if lt IE 9]>
+<script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <link rel="shortcut icon" href="">
+    <style>
+        #bg_img{
+            width: auto;
+            height: 100vh;
+            position: absolute;
+            z-index: 1;
+        }
+
+        #top_img{
+            width: auto;
+            height: 100vh;
+            position: absolute;
+            z-index: 5;
+        }
+        canvas{
+            position: absolute;
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="bg_img" src="yokohama_back.png">
+    <canvas id="cvs"></canvas>
+    <img id="top_img" src="yokohama_top.png">
+    <button id="btn_hanabi">花火発射</button>
+    <script type="text/javascript" src="main_practice.js"></script>
+</body>
+
+</html>
