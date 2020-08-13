@@ -7,9 +7,9 @@ const FPS = 60;
 
 
 
-// //発射ボタン
-// var btn_hanabi = document.getElementById("btn_hanabi");
-// btn_hanabi.addEventListener("click", startHanabi);
+//発射ボタン
+var btn_hanabi = document.getElementById("btn_hanabi");
+btn_hanabi.addEventListener("click", startHanabi);
 
 
 //CANVAS
@@ -131,22 +131,13 @@ mainLoop();
 
 //ボタン
 function startHanabi() {
-  var start = rand(200, 400);
-  var vy = rand(-10, -20);
-  hanabiList.push(new HANABI(start, SCREEN_H, 0, -12, 0.15,200,HANABI_COLOR,0));
+  var start = rand(200, 600);
+    var vy = rand(-2, -4);
+    hanabiList.push(new HANABI(start, SCREEN_H, 0,vy, 0.01,200,HANABI_COLOR[0],0));
 }
 
 //ランダムに位置を決める
 function rand(min, max) {
   return Math.floor(
     (Math.random() * (max - min + 1)) + min);
-}
-
-document.onkeydown = function (e) {
-  if (e.keyCode == 32) {
-    var start = rand(200, 600);
-    var vy = rand(-2, -4);
-    hanabiList.push(new HANABI(start, SCREEN_H, 0,vy, 0.01,200,HANABI_COLOR[0],0));
-  }
-
 }
