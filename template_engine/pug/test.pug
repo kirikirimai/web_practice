@@ -1,0 +1,24 @@
+- var title="これはtitle変数のテスト";
+
+mixin pet(name)
+    li #{name}
+
+doctype html
+html(lang="ja")
+    head
+        meta(charset="utf-8")
+    body
+        header#header
+            h1 #{title}
+        main#main-contents
+            h2 これはh2タグ
+            - for(var x=0; x<10; x++)
+                li リスト
+            ul
+                +pet("cat")
+                +pet("dog")
+                +pet("pig")
+        footer#footer
+            p ここはフッター
+            p
+                a(href="#") これはリンクｓｄｆｄｓ
