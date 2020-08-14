@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>これはテスト</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="main.css" />
+
+    <!--[if lt IE 9]>
+      <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="" />
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header id="header">
+        <h1>IntersectionObserverAPIで要素の交差</h1>
+        <p>
+          rootMargin: '-50%
+          0px'　の設定（ページの中央）にしています。目印の赤い線に達したらボックスの背景が赤くなるクラスを追加<br />
+          ボックス要素全体が赤い線を通り過ぎたらクラスを削除
+        </p>
+      </header>
+
+      <!--box-->
+      <div class="box">
+        <p>ここはボックス</p>
+      </div>
+
+      <!--box-->
+      <div class="box" id="target">
+        <p>ここがターゲット要素</p>
+      </div>
+
+      <!--box-->
+      <div class="box">
+        <p>ここはボックス</p>
+      </div>
+
+      <!--box-->
+      <div class="box">
+        <p>ここはボックス</p>
+      </div>
+    </div>
+    <div id="center_line"></div>
+    <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
