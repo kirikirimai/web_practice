@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>これはテスト</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="navi.css" />
+
+    <!--[if lt IE 9]>
+      <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="" />
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header id="header">
+        <h1>IntersectionObserverAPIで要素の交差</h1>
+        <nav>
+          <ul id="gnav">
+            <li><a href="#box1">ボックス1</a></li>
+            <li><a href="#box2">ボックス2</a></li>
+            <li><a href="#box3">ボックス3</a></li>
+            <li><a href="#box4">ボックス4</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!--box-->
+      <div id="box1" class="box">
+        <p>ここはボックス box1</p>
+      </div>
+
+      <!--box-->
+      <div id="box2" class="box">
+        <p>ここはボックス　box2</p>
+      </div>
+
+      <!--box-->
+      <div id="box3" class="box">
+        <p>ここはボックス　box3</p>
+      </div>
+
+      <!--box-->
+      <div id="box4" class="box">
+        <p>ここはボックス box4</p>
+      </div>
+    </div>
+    <div id="center_line"></div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+    <script type="text/javascript" src="navi.js"></script>
+  </body>
+</html>
