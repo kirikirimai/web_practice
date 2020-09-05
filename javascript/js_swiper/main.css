@@ -1,0 +1,20 @@
+*{
+  box-sizing: border-box;
+}
+
+img{
+  width: 100%;
+}
+.swiper-container {
+  max-width: 865px;
+    margin: 30px auto;
+    padding: 0 7vw;
+    border: 2px solid #333;
+}
+.swiper-slide{
+  width: 100%;
+  min-width: 166px;
+  height: 100%;
+  min-height: 400px;
+  border: 1px solid #ccc;
+}

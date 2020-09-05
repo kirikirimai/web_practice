@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>object fit IE11テスト</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <!--[if lt IE 9]>
+<script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <link rel="shortcut icon" href="">
+</head>
+
+<body>
+    <h1>object fit ie11 テスト</h1>
+    <div id="img-block">
+        <img src="image/photo.jpg">
+    </div>
+    
+
+    <ul class="slick01">
+         <li><img alt="画像1" src="image/01.jpg" /></li>
+         <li><img alt="画像2" src="image/02.jpg" /></li>
+         <li><img alt="画像3" src="image/03.jpg" /></li>
+    </ul>
+ 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.js"></script>
+        <script> objectFitImages(); </script>
+         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="slick.css"/>
+    <script type="text/javascript" src="slick.min.js"></script>
+    <script>  
+        $(function(){
+                $('.slick01').slick();
+        });
+    </script>
+</body>
+
+</html>
