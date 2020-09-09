@@ -1,0 +1,228 @@
+@charset "UTF-8";
+/*
+Theme Name : 練習用テーマ
+*/
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 14px;
+  height: 100%;
+}
+
+#header-block {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+}
+
+#header-block .header-block__inner {
+  width: 100%;
+  max-width: 980px;
+  margin: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header-block .header-block__inner h1 a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#header-block .header-block__inner #gnav-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+
+#header-block .header-block__inner #gnav-block li {
+  margin: 0 10px;
+}
+
+#header-block .header-block__inner #gnav-block li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* main */
+#main-block {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.footer-fixed {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+.section-block {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.section-block + .section-block {
+  margin: 30px 0 0 0;
+}
+
+.list-news {
+  list-style: none;
+}
+
+.list-product {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  list-style: none;
+  margin-top: -20px;
+}
+
+.list-product li {
+  position: relative;
+  width: 50%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.list-product li img {
+  width: 50%;
+}
+
+@media (min-width: 960px) {
+  #main-block {
+    width: 980px;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+  .section-block {
+    width: 980px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .list-product li {
+    width: 20%;
+  }
+  .list-product li img {
+    width: 80%;
+  }
+  /*960px〜*/
+}
+
+/* footer */
+#footer-block {
+  margin-top: auto;
+  width: 100%;
+  background-color: #cfcfcf;
+}
+
+#footer-block .footer-block__inner {
+  width: 100%;
+  max-width: 980px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* 共通 */
+.ttl-h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.content {
+  width: 100%;
+}
+
+@media (min-width: 960px) {
+  .content {
+    width: 980px;
+  }
+}
+
+.c-relatedArticle__button {
+  max-width: 200px;
+  margin: 50px auto 0;
+  text-align: center;
+}
+
+.c-relatedArticle__button .c-relatedArticle__link {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.c-relatedArticle__button .c-relatedArticle__link:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+#article_loading {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#generate_article_list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+#generate_article_list li {
+  width: 32%;
+  margin: 10px 10px 0 0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#generate_article_list li:nth-child(3n) {
+  margin-right: 0;
+}
+/*# sourceMappingURL=style.css.map */
