@@ -2,7 +2,7 @@
 <?php
 
 //メールの宛先（To）のメールアドレス
-define('MAIL_TO', "xxxxx@xxxxx.com");
+define('MAIL_TO', "go.revolution.no3@gmail.com");
 //メールの宛先（To）の名前  
 define('MAIL_TO_NAME', "きりやま");
 //Cc の名前
@@ -12,7 +12,7 @@ define('MAIL_CC_NAME', 'Cc宛先名');
 //Bcc
 define('MAIL_BCC', 'xxxxx@xxxxx.com');
 //Return-Pathに指定するメールアドレス
-define('MAIL_RETURN', 'xxxxx@xxxxx.com');
+define('MAIL_RETURN', 'the_zombis@hotmail.co.jp');
 //自動返信の返信先名前（自動返信を設定する場合）
 define('AUTO_REPLY_NAME', '返信先名前');
 
@@ -23,8 +23,7 @@ $getcsvdata=[];
 $mailflg=false;
 
 if(isset($_POST["submited"]) && $_SERVER["REQUEST_METHOD"]==='POST'){
-    echo "クリックされてよ";
-  
+    echo "クリックさたよ";
       
       $name=isset($_POST["name"])? $_POST["name"]:null;
       $mail=isset($_POST["mail"])? $_POST["mail"]:null;
@@ -135,8 +134,10 @@ if(isset($_POST["submited"]) && $_SERVER["REQUEST_METHOD"]==='POST'){
 
     }
 
-}else{
-    echo "クリックされてないよ<br>";
+}
+    
+
+echo "クリックされてないよ<br>";
      $fp=fopen("form.csv","r");
         flock($fp,LOCK_EX);
     $count=0;
@@ -144,8 +145,6 @@ if(isset($_POST["submited"]) && $_SERVER["REQUEST_METHOD"]==='POST'){
         $getcsvdata[$count]=$array;
         $count++;
     }
-    
-}
 
 //エスケープ処理を行う関数
 function h($var) {
@@ -302,6 +301,10 @@ input[type=submit]:hover{
     background-color: #dc143c;
     color: #fff;
 }
+
+.csv_table{
+    font-size: 12px;
+}
 </style>
 </head>
 <body>
@@ -334,7 +337,7 @@ input[type=submit]:hover{
             <input type="radio" name="howto"　value="メール" id="r2"><label for="r2" class="label_btn radio">メール</label>
            <?php if(isset($error["howto"])):  ?><span class="txt-error"><?= $error["howto"]; ?></span><?php endif; ?>
           </td>
-      </tr><label>
+      </tr>
       
       <tr>
           <th>好きな食べ物 ：</th>
@@ -356,6 +359,7 @@ input[type=submit]:hover{
       <tr>
           <th>お問い合わせ内容 ：</th>
           <td>
+              <?php if(isset($error["body"])):  ?><span class="txt-error"><?= $error["body"]; ?></span><?php endif; ?>
               <textarea name="body" placeholder="お問い合わせ内容（1000文字まで）をお書きください" rows="3"></textarea>
         </td>
       </tr>
@@ -367,11 +371,11 @@ input[type=submit]:hover{
   </table>
   </form>
   <?php if(count($getcsvdata)>0): ?>
-  <div>
+  <table class="csv_table">
       <?php foreach($getcsvdata as $data): ?>
-      <p><?= $data[0];  ?></p>
+      <tr><td><?= $data[0]; ?></td><td><?= $data[1]; ?></td><td><?= $data[2]; ?></td><td><?= $data[3]; ?></td><td><?= $data[4]; ?></td></tr>
       <?php endforeach; ?>
-</div>
+</table>
 <?php endif; ?>
 </body>
 </html>
