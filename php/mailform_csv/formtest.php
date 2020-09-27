@@ -33,6 +33,8 @@ if(isset($_POST["submited"]) && $_SERVER["REQUEST_METHOD"]==='POST'){
       $food=isset($_POST["food"])? $_POST["food"]:null;
       $body=isset($_POST["body"])? $_POST["body"]:null;
 
+      echo $howto;
+
       //前後の空白を削除
         $name=trim($name);
         $mail=trim($mail);
@@ -334,7 +336,7 @@ input[type=submit]:hover{
       <tr>
           <th>連絡方法 ：</th>
           <td><input type="radio" name="howto" value="電話" id="r1"><label for="r1" class="label_btn radio">電話</label>
-            <input type="radio" name="howto"　value="メール" id="r2"><label for="r2" class="label_btn radio">メール</label>
+            <input type="radio" name="howto" value="メール" id="r2"><label for="r2" class="label_btn radio">メール</label>
            <?php if(isset($error["howto"])):  ?><span class="txt-error"><?= $error["howto"]; ?></span><?php endif; ?>
           </td>
       </tr>
