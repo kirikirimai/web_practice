@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow: auto;
+}
+.image-block {
+  position: relative;
+  height: 532px;
+  overflow: hidden;
+  margin: auto;
+  @media screen and (max-width: 767px) {
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
+  &__item {
+    position: absolute;
+    width: 34%;
+    overflow: hidden;
+    top: 0;
+    transition: all 500ms cubic-bezier(0.09, 0.76, 0.52, 1);
+    @media screen and (max-width: 767px) {
+      position: relative;
+      width: 532px;
+      transition: none;
+      flex-shrink: 0;
+      flex: 1 0 auto;
+    }
+    &:nth-child(1) {
+      left: 0;
+      border-right: 5px solid #fff;
+    }
+    &:nth-child(2) {
+      left: 50%;
+      transform: translate(-50%, 0);
+      border-left: 5px solid #fff;
+      border-right: 5px solid #fff;
+      @media screen and (max-width: 767px) {
+        left: auto;
+        transform: none;
+      }
+    }
+    &:nth-child(3) {
+      right: 0;
+      border-left: 5px solid #fff;
+    }
+  }
+  &__inner {
+    position: relative;
+    height: 532px;
+    &::after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      content: " ";
+      top: auto;
+      height: 60%;
+      background: linear-gradient(
+        0,
+        rgba(0, 0, 0, 0.6) 0,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  &__body {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    width: 530px;
+    display: inline-block;
+    transition: all 0.4s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+  }
+  &__info {
+    position: absolute; 
+    bottom: 10%;
+    left: 50%;
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+    width: 530px;
+    opacity: 0;
+    transform: translate(-50%, 0);
+    transition: all 0.4s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+  }
+} 
+
+.ttl {
+  font-size: 2.5vmin;
+  font-weight: 300;
+}
+.sub_ttl {
+  font-size: 2.5vmin;
+  font-weight: bold;
+  margin-bottom:2vmin;
+}
+.active {
+  width: 60% !important;
+}
+
+.on-top {
+  z-index: 2;
+}
+
+.down {
+  opacity: 0;
+  bottom: 7%;
+}
+
+.up {
+  opacity: 1;
+  bottom: 17%;
+}
