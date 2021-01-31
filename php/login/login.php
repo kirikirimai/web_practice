@@ -40,7 +40,7 @@ if(isset($_POST["submitted"])){
         exit;
     }else{
        
-        header('Location:login_form.php?result=false');
+        header('Location:login_form.php?result=true');
         exit;
     }
 }
