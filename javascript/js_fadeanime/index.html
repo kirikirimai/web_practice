@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>メインビジュアルのフェードアニメ</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <!--[if lt IE 9]>
+      <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="" />
+    <style>
+      @charset "UTF-8";
+      .anime {
+        position: relative;
+        width: 800px;
+        margin: auto;
+        /* レイアウト */
+      }
+      .anime .flex {
+        display: flex;
+        justify-content: space-between;
+      }
+      .anime .flex-right {
+        margin-left: 30px;
+      }
+      .anime .text-wrap p {
+        margin: 0;
+        padding: 0;
+      }
+      .anime .img_box {
+        position: relative;
+        width: 400px;
+        min-height: 266px;
+      }
+      .anime .img_box img {
+        position: absolute;
+        width: 400px;
+        z-index: 0;
+      }
+
+      .anime .img_box p {
+        z-index: 5;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+      }
+      .anime .img_box img:last-of-type {
+        z-index: -1;
+      }
+
+      /*----------------------------------
+       フェードアニメの設定
+      ----------------------------------*/
+      .anime-box {
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        position: absolute;
+      }
+      .anime-box .fade-b-u {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.3s ease;
+        transition-delay: 0.5s;
+      }
+
+      .anime-box .fade-b-u-type2 {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.3s ease;
+        transition-delay: 1.6s;
+      }
+      .anime-box .fade-l-r {
+        overflow: hidden;
+        color: #fff;
+        display: inline-block;
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 1.5;
+        position: relative;
+        white-space: nowrap;
+      }
+      .anime-box .fade-l-r::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #f8b139;
+        transition: width 0.5s;
+        transition-delay: 1s;
+        z-index: -1;
+      }
+      .anime-box .fade-l-r-2 {
+        overflow: hidden;
+        display: inline-block;
+        color: #fff;
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 1.5;
+        position: relative;
+        white-space: nowrap;
+      }
+      .anime-box .fade-l-r-2::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #f8b139;
+        transition: width 0.5s;
+        transition-delay: 1.2s;
+        z-index: -1;
+      }
+
+      .anime-box .fade-bg {
+        transform: translate(0, 0);
+        transition: all 0.5s ease;
+        transition-delay: 0.5s;
+      }
+
+      /*----------------------------------
+        アクティブになった時
+      ----------------------------------*/
+      .anime-box.active {
+        opacity: 1;
+      }
+      .anime-box.active .fade-b-u {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .anime-box.active .fade-b-u-type2 {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .anime-box.active .fade-l-r::before {
+        width: 100%;
+      }
+      .anime-box.active .fade-l-r-2::before {
+        width: 100%;
+      }
+
+      .anime-box.active .fade-bg {
+        transform: translate(10px, 10px);
+      }
+
+      @media screen and (max-width: 768px) {
+        .anime {
+          width: 100%;
+          margin: auto;
+          /* レイアウト */
+        }
+        
+        .anime-box{
+            width: 92vw;
+            margin: auto;
+        }
+        .anime .flex {
+          flex-direction: column;
+        }
+        .anime .flex-right {
+          margin-left: 0;
+        }
+
+        .anime .img_box {
+        width: 100%;
+        min-height: 63vw;
+      }
+      .anime .img_box img {
+        width: 100%;
+      }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="anime">
+      <h1>メインビジュアルのフェードアニメ</h1>
+      <div class="anime-box">
+        <div class="flex">
+          <div class="flex-left">
+            <h2>ボックス1</h2>
+            <p class="fade-b-u">下から上のアニメーション</p>
+            <div class="text-wrap">
+              <p class="fade-l-r">左から右のアニメ１</p>
+            </div>
+            <div class="text-wrap">
+              <p class="fade-l-r-2">左から右のアニメ２</p>
+            </div>
+          </div>
+          <div class="flex-right img_box">
+            <img src="photo3.jpg" />
+            <img class="fade-bg" src="https://placehold.jp/400x266.png" />
+            <p class="fade-b-u-type2">ORITENL Yellow</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="anime-box">
+        <div class="flex">
+          <div class="flex-left">
+            <h2>ボックス２</h2>
+            <p class="fade-b-u">下から上のアニメーション</p>
+            <div class="text-wrap">
+              <p class="fade-l-r">左から右のアニメ１</p>
+            </div>
+            <div class="text-wrap">
+              <p class="fade-l-r-2">左から右のアニメ２</p>
+            </div>
+          </div>
+
+          <div class="flex-right img_box">
+            <img src="photo2.jpg" />
+            <img class="fade-bg" src="https://placehold.jp/400x266.png" />
+            <p class="fade-b-u-type2">ORITENL PINK</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="anime-box">
+        <div class="flex">
+          <div class="flex-left">
+            <h2>ボックス3</h2>
+            <p class="fade-b-u">下から上のアニメーション</p>
+            <div class="text-wrap">
+              <p class="fade-l-r">左から右のアニメ１</p>
+            </div>
+            <div class="text-wrap">
+              <p class="fade-l-r-2">左から右のアニメ２</p>
+            </div>
+          </div>
+          <div class="flex-right img_box">
+            <img src="photo1.jpg" />
+            <img class="fade-bg" src="https://placehold.jp/400x266.png" />
+            <p class="fade-b-u-type2">SHINING WHITE</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var slide_speed = 4000;
+      window.addEventListener('load', function () {
+        viewSlide('.anime-box');
+      });
+      function viewSlide(className, slideNo = 0) {
+        console.log(slideNo);
+
+        //要素を取得
+        let imgArray = document.querySelectorAll(className);
+        //一致するすべての要素のclassを切り替える
+        imgArray.forEach(function (element) {
+          if (element.classList.contains('active') == true) {
+            element.classList.remove('active');
+            console.log('削除');
+          }
+        });
+
+        //クラスを追加
+        imgArray[slideNo].classList.add('active');
+
+        //次のスライド
+        slideNo++;
+
+        console.log('next:' + slideNo);
+        if (slideNo >= imgArray.length) {
+          slideNo = 0; //次のスライドがなければ最初のスライドへ戻る
+        }
+
+        //コールバック
+        setTimeout(function () {
+          viewSlide(className, slideNo);
+        }, slide_speed);
+      }
+    </script>
+  </body>
+</html>
